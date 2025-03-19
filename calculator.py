@@ -10,12 +10,12 @@ def height_to_meters(feet: float, inches: float):
 def pounds_to_kg(pounds):
     return pounds *0.45 # metric conversion factor for kilograms
 
-# def bmicalculator(height, weight: float):
-#     height = height * height # square height in meters
-#     bmi = weight / height #BMI Formula: kg div by squared height
-#     # decimal precision
-#     bmi_decimal = float("{:.2f}".format(bmi))
-#     return bmi_decimal 
+def bmicalculator(height, weight: float):
+    height = height * height # square height in METERS
+    bmi = weight / height #BMI Formula: KILOGRAMS div by squared height
+    # decimal precision
+    bmi_decimal = float("{:.1f}".format(bmi))
+    return bmi_decimal 
 
 # def categorycalculator(bmi):
 #     # match bmi:
