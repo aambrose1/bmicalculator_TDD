@@ -9,6 +9,6 @@ Example: <br>
     $ .\myenv\Scripts\activate
 5. Install requirements.txt <br>
     $ pip install -r requirements.txt
-You're set up!
+<br>You're set up!
 6. Run BMI calculator using $ python calculator.py
    
