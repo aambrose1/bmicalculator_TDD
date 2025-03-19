@@ -7,9 +7,8 @@ def get_user_input():
 def height_to_meters(feet: float, inches: float):
     return ((feet*12) + inches) * 0.025 # metric covnersion factor for meters
 
-# def pounds_to_kg(pounds):
-#     return
-#     return pounds *0.45 # metric conversion factor for kilograms
+def pounds_to_kg(pounds):
+    return pounds *0.45 # metric conversion factor for kilograms
 
 # def bmicalculator(height, weight: float):
 #     height = height * height # square height in meters
