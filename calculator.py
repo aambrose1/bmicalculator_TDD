@@ -17,16 +17,21 @@ def bmicalculator(height, weight: float):
     bmi_decimal = float("{:.1f}".format(bmi))
     return bmi_decimal 
 
-# def categorycalculator(bmi):
-#     # match bmi:
-#     #     case _ if bmi < 18.5:
+def categorycalculator(bmi):
+    category = ""
+    match bmi:
+        case _ if bmi < 18.5:
+            category = "Underweight"
     
-#     #     case _ if bmi < 18.5:
+        case _ if bmi >= 18.5 and bmi <= 24.9:
+            category = "Normal weight"
         
-#     #     case _ if bmi < 18.5:
+        case _ if bmi > 25 and bmi < 29.9:
+            category = "Overweight"
 
-#     #     case _ if bmi < 18.5:
-#     return
+        case _ if bmi >= 30:
+            category = "Obese"
+    return category
 
 # def print_results(bmi, category):
 #     print("BMI: " + bmi)
