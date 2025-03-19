@@ -37,15 +37,15 @@ def print_results(bmi, category):
     print("BMI: " + str(bmi) + " Category: "+ category)
 
 
-# # Gather data and calculate using that data
+# Gather data and calculate using that data
 
-# feet, inches, pounds = get_user_input()
-# kg = pounds_to_kg(pounds)
-# height = height_to_meters(feet, inches) # in meters
-# bmi = bmicalculator(height, kg)
-# category = categorycalculator(bmi)
+feet, inches, pounds = get_user_input()
+kg = pounds_to_kg(pounds)
+height = height_to_meters(feet, inches) # in meters
+bmi = bmicalculator(height, kg)
+category = categorycalculator(bmi)
 
-# # Print results
-# print_results(bmi, category)
+# Print results
+print_results(bmi, category)
 
 
