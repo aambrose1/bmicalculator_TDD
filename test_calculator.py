@@ -1,5 +1,5 @@
 import pytest
-from calculator import get_user_input, height_to_meters, pounds_to_kg, bmicalculator, categorycalculator#, print_results
+from calculator import get_user_input, height_to_meters, pounds_to_kg, bmicalculator, categorycalculator, print_results
 
 def test_user_input(monkeypatch): # monekypatch needed for i/o
     ft = 5.0
@@ -46,6 +46,7 @@ def test_bounds_MID_categorycalculator():
 def test_bounds_HIGH_categorycalculator():
     assert categorycalculator(30) == "Obese"
 
-
-# def test_print_results():
-#     assert print_results == "test"
+def test_print_results(capsys): # required for output test
+    print_results(22.7, "Normal weight")
+    captured = capsys.readouterr()
+    assert captured.out == "BMI: 22.7 Category: Normal weight\n"

@@ -33,8 +33,8 @@ def categorycalculator(bmi):
             category = "Obese"
     return category
 
-# def print_results(bmi, category):
-#     print("BMI: " + bmi)
+def print_results(bmi, category):
+    print("BMI: " + str(bmi) + " Category: "+ category)
 
 
 # # Gather data and calculate using that data
