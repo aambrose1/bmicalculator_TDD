@@ -1,11 +1,27 @@
 import pytest
-from calculator import calculator, height_to_inches
+from calculator import get_user_input, height_to_meters, pounds_to_kg, bmicalculator, categorycalculator, print_results
 
-def test_normal_bmi():
-    assert calculator(63, 125) == "BMI: 22.7 Category: Normal"
+def test_user_input(monkeypatch): # monekypatch needed for i/o
+    ft = 5
+    inches = 3
+    lbs = 125.0
 
-def test_underweight_bmi():
+    input_values = iter([ft, inches, lbs])
+    monkeypatch.setattr('builtins.input', lambda _: next(input_values))
+    result = get_user_input()
+    assert result == (5, 3, 125.0)
 
-def test_overweight_bmi():
+def test_height_to_meters():
+    assert height_to_meters() == "test"
 
-def test_obese_bmi():
+def test_pounds_to_kg():
+    assert pounds_to_kg() == "test"
+
+def test_bmicalculator():
+    assert bmicalculator() == "test"
+
+def test_categorycalculator():
+    assert categorycalculator == "tes"
+
+def test_print_results():
+    assert print_results == "test"
